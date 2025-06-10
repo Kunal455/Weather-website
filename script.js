@@ -11,7 +11,7 @@ let searchbox = document.querySelector("#city");
 async function checkWeather(city){
  
 
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?&units=metric&q=${city}&appid=5653a0648b98f11431c3e8a1a89b6140`);
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${5653a0648b98f11431c3e8a1a89b6140}&units=metric`);
     var data = await response.json();
 
     console.log(data);
