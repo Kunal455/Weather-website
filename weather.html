@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <style>
+    /* Body as full viewport flex container to center .container */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f7f9fc;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container box */
+    .container {
+      border: 3px solid #87ceeb; /* sky blue */
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 0 20px rgba(135, 206, 235, 0.4);
+      width: 400px;      /* wider */
+      min-height: 350px; /* taller */
+      padding: 40px 50px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    /* Search row */
+    .search-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    #city {
+      padding: 12px 14px;
+      font-size: 16px;
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    /* Temperature below search */
+    .temp-container {
+      font-size: 72px;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 30px;
+      color: #222;
+    }
+
+    .temp-container sup {
+      font-size: 32px;
+      vertical-align: super;
+    }
+
+    /* Humidity and Pressure below temp */
+    .weather-details {
+      font-size: 15px;
+      color: #555;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+
+    .weather-details span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="search-row">
+      <input type="text" placeholder="Enter the city" id="city" />
+      <button class="btn">Search</button>
+    </div>
+
+    <div class="name"></div>
+
+    <div class="temp-container">
+      <span class="temp" value="data">0</span><sup>°</sup>C
+    </div>
+
+    <div class="weather-details">
+      <span>Humidity: <span class="humid">0</span>%</span>
+      <span>Pressure: <span class="press">0</span> pa</span>
+    </div>
+
+  </div>
+
+  <script src="wheater.js"></script>
+</body>
+</html>
